@@ -14,7 +14,7 @@ class HomeView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
+        title: const Text("Home"),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -35,12 +35,12 @@ class HomeView extends StatelessWidget {
           controller.funcOnAdd(
             data: ModelListTask(
               id: Random().nextInt(100).toString(),
-              title: "Title " + Random().nextInt(100).toString(),
-              description: "description " + Random().nextInt(100).toString(),
+              title: "Title ${Random().nextInt(100)}",
+              description: "description ${Random().nextInt(100)}",
             ),
           );
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
